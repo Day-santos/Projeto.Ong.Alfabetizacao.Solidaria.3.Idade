@@ -8,22 +8,29 @@
 </head>
 
 <body>
-
+    <!-- Cabeçalho -->
     <header>
         <nav class="cabecalho_menu_suspenso">
-            <ul>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
                 <li> <a href="index.html"> inicio</a></li>
                 <li> <a href="projetos.html"> Projetos</a></li>
                 <li> <a href="cadastro.html"> Cadastro </a></li>
             </ul>
         </nav>
 
-        <h1 class="cabecalho_titulo"> ONG Alfabetização Solidária 3ª Idade </h1>
-        <img class="cabecalho_foto_capa" src="/Imagens/capa estudos.jpg" alt="estudos">
+        <section class="banner">
+            <div class="banner_texto">
+                <h1> ONG Alfabetização Solidária 3ª Idade </h1>
+                <p>Aprender é recomeçar. Juntos, transformamos histórias! </p>
+            </div>
+        </section>
     </header>
 
     <main>
-        <section>
+
+        <!-- Quem somos -->
+        <section class="about">
             <h2> Quem Somos</h2>
             <p> Alfabetização Solidária — 3ª Idade
                 <br><br>
@@ -45,6 +52,7 @@
             </p>
         </section>
 
+        <!-- Missão, Visão e valores -->
         <section>
             <h2> Missão </h2>
             <p>Promover a alfabetização e a inclusão digital de pessoas idosas, oferecendo oportunidades de aprendizado
@@ -59,11 +67,25 @@
             <H2> Valores</H2>
             <p>Respeito e dignidade: acreditamos no valor e na sabedoria de cada pessoa, independentemente da idade.</p>
         </section>
+
+        <!-- Contato -->
+
+        <section class="contato">
+            <h1> Contato </h1>
+            <p><strong>Alfabetização Solidária 3ª Idade — Aprender é recomeçar.</strong></p>
+            <p>Endereço: Rua Esperança, 123 – São Paulo/SP</p>
+            <p>E-mail: contato@alfabetizacaosolidaria.org</p>
+            <p>Telefone: (11) 99999-9999</p>
+            </p>
+        </section>
+
     </main>
 
+    <!-- Rodape -->
     <footer> © 2025 ONG Alfabetização Solidária 3ª Idade — Todos os direitos reservados.
         Feito por Dayane Santos.</footer>
 
+        <script src="script.js"></script>
 </body>
 
 </html>
