@@ -9,9 +9,11 @@
     --cor-neutra-600: #757575;
     --cor-neutra-800: #212121;
 
+
     /* 🖋️ Tipografia */
     --fonte-principal: 'Poppins', Arial, sans-serif;
     --fonte-titulo: 'Montserrat', sans-serif;
+
 
     /* 📏 Sistema de Espaçamento (8px base) */
     --espaco-1: 8px;
@@ -20,6 +22,7 @@
     --espaco-4: 32px;
     --espaco-5: 48px;
     --espaco-6: 64px;
+
 
     /* 📐 Tamanhos de fonte */
     --fs-xs: 0.8rem;
@@ -30,12 +33,14 @@
     --fs-xxl: 2.5rem;
 }
 
+
 /* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     font-family: var(--fonte-principal);
@@ -44,12 +49,15 @@ body {
     line-height: 1.6;
 }
 
+
 /*  CABEÇALHO E MENU */
+
 
 header {
     position: relative;
     width: 100%;
 }
+
 
 /* Menu principal */
 .cabecalho_menu_suspenso {
@@ -59,8 +67,9 @@ header {
     justify-content: center;
     align-items: center;
     padding: var(--espaco-2);
-    font-size: var(--fs-lg) 
+    font-size: var(--fs-lg)
 }
+
 
 /* Ícone hambúrguer (mobile) */
 .menu-toggle {
@@ -72,12 +81,14 @@ header {
     cursor: pointer;
 }
 
+
 /* Lista de navegação */
 .cabecalho_menu_suspenso ul {
     list-style: none;
     display: flex;
     gap: var(--espaco-4);
 }
+
 
 .cabecalho_menu_suspenso a {
     text-decoration: none;
@@ -86,9 +97,11 @@ header {
     transition: color 0.3s;
 }
 
+
 .cabecalho_menu_suspenso a:hover {
     color: var(--cor-terciaria);
 }
+
 
 /*  BANNER  */
 .banner {
@@ -104,6 +117,7 @@ header {
     text-align: center;
 }
 
+
 .banner::before {
     content: "";
     position: absolute;
@@ -111,6 +125,7 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
+
 
 .banner_texto {
     position: relative;
@@ -120,21 +135,25 @@ header {
     border-radius: 10px;
 }
 
+
 .banner_texto h1 {
     font-family: var(--fonte-titulo);
     font-size: var(--fs-xxl);
     margin-bottom: var(--espaco-1);
 }
 
+
 .banner_texto p {
     font-size: var(--fs-md);
 }
+
 
 /* Sobre nós */
 main {
     display: grid;
     grid-template-columns: 1fr min(12000px, 90%) 2fr;
 }
+
 
 main>section {
     grid-column: 2;
@@ -145,6 +164,7 @@ main>section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 h2 {
     font-family: var(--fonte-titulo);
     font-size: var(--fs-sm);
@@ -152,13 +172,16 @@ h2 {
     margin-bottom: var(--espaco-2);
 }
 
+
 .about p,
 section p {
     font-size: var(--fs-sm);
     margin-bottom: var(--espaco-2);
 }
 
+
 /* MISSÃO, VISÃO E VALORES */
+
 
 section.mvv-container {
     display: grid;
@@ -169,6 +192,7 @@ section.mvv-container {
     padding: 20px;
 }
 
+
 .mvv-card {
     background-color: #ffffff;
     padding: 30px 20px;
@@ -178,10 +202,12 @@ section.mvv-container {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .mvv-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
+
 
 .mvv-card h2 {
     color: #5c4d9d;
@@ -191,11 +217,13 @@ section.mvv-container {
     margin-bottom: var(--espaco-2);
 }
 
+
 .mvv-card p {
     color: #333;
     font-size: var(--fs-md);
     line-height: 1.5;
 }
+
 
 /* 🔹 Responsividade */
 @media (max-width: 768px) {
@@ -205,6 +233,8 @@ section.mvv-container {
 }
 
 
+
+
 /*  CONTATO */
 .contato {
     background-color: var(--cor-terciaria);
@@ -212,10 +242,12 @@ section.mvv-container {
     text-align: center;
 }
 
+
 .contato h1 {
     font-size: var(--fs-xl);
     margin-bottom: var(--espaco-2);
 }
+
 
 /*  RODAPÉ */
 footer {
@@ -226,7 +258,9 @@ footer {
     font-size: var(--fs-sm)
 }
 
+
 /*  RESPONSIVIDADE */
+
 
 /* 1️⃣ Telas grandes (acima de 1200px) */
 @media (min-width: 1200px) {
@@ -235,12 +269,14 @@ footer {
     }
 }
 
+
 /* 2️⃣ Laptops (até 1024px) */
 @media (max-width: 1024px) {
     .banner {
         height: 350px;
     }
 }
+
 
 /* 3️⃣ Tablets (até 768px) */
 @media (max-width: 768px) {
@@ -256,18 +292,22 @@ footer {
         border-radius: 8px;
     }
 
+
     .menu-toggle {
         display: block;
     }
+
 
     .cabecalho_menu_suspenso ul.ativo {
         display: flex;
     }
 
+
     .banner_texto h1 {
         font-size: 1.8rem;
     }
 }
+
 
 /* 4️⃣ Celulares médios (até 480px) */
 @media (max-width: 480px) {
@@ -275,14 +315,17 @@ footer {
         height: 250px;
     }
 
+
     .banner_texto p {
         font-size: var(--fs-sm);
     }
+
 
     main>section {
         padding: var(--espaco-3);
     }
 }
+
 
 /* 5️⃣ Celulares pequenos (até 360px) */
 @media (max-width: 360px) {
@@ -292,7 +335,10 @@ footer {
 }
 
 
+
+
 /*Projetos Sociais*/
+
 
 #projetos {
     background-color: #f7f5ff;
@@ -300,13 +346,16 @@ footer {
     text-align: center;
 }
 
+
 #projetos h2 {
     font-size: var(--fs-xl);
     color: #5c4d9d;
     font-family: var(--fonte-titulo);
     margin-bottom: var(--espaco-2);
 
+
 }
+
 
 #projetos>p {
     max-width: 800px;
@@ -315,6 +364,7 @@ footer {
     color: #444;
     line-height: 1.6;
 }
+
 
 /* ===== GRID DE PROJETOS ===== */
 #projetos .projetos-grid {
@@ -325,6 +375,7 @@ footer {
     margin: 0 auto;
     padding: 0 10px;
 }
+
 
 /* ===== CARD DE PROJETO ===== */
 #projetos article {
@@ -338,10 +389,12 @@ footer {
     text-align: left;
 }
 
+
 #projetos article:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
 
 /* ===== IMAGEM DO PROJETO ===== */
 #projetos article img {
@@ -350,6 +403,7 @@ footer {
     object-fit: cover;
 }
 
+
 /* ===== CONTEÚDO DO CARD ===== */
 #projetos article h3 {
     font-size: var(--fs-lg);
@@ -357,12 +411,14 @@ footer {
     margin: 50px 20px 10px;
 }
 
+
 #projetos article p {
     font-size: var(--fs-md);
     color: #333;
     margin: 0 20px 20px;
     line-height: 1.5;
 }
+
 
 .Button {
     text-decoration: none;
@@ -375,22 +431,28 @@ footer {
 }
 
 
+
+
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
     #projetos {
         padding: 40px 10px;
     }
 
+
     #projetos h2 {
         font-size: var(--fs-lg);
     }
+
 
     #projetos article img {
         height: 180px;
     }
 }
 
+
 /*formulario*/
+
 
 /* ======== Seção do formulário ======== */
 .signup-section {
@@ -404,12 +466,14 @@ footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+
 .signup-section h2 {
     text-align: center;
     color: #663399;
     margin-bottom: 30px;
     font-size: 2.2rem;
 }
+
 
 /* ======== Mensagem de sucesso ======== */
 .success-message {
@@ -423,12 +487,14 @@ footer {
     margin-bottom: 25px;
 }
 
+
 /* ======== Estrutura do formulário ======== */
 form {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
+
 
 fieldset {
     border: 2px solid #e0d7f3;
@@ -437,12 +503,14 @@ fieldset {
     background-color: #faf7ff;
 }
 
+
 legend {
     font-weight: bold;
     color: #5a2d82;
     padding: 0 10px;
     font-size: 1.1rem;
 }
+
 
 /* ======== Campos ======== */
 .form-group {
@@ -451,10 +519,12 @@ legend {
     margin-bottom: 15px;
 }
 
+
 label {
     font-weight: 500;
     margin-bottom: 8px;
 }
+
 
 input,
 select,
@@ -467,6 +537,7 @@ textarea {
     font-family: inherit;
 }
 
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -474,6 +545,7 @@ textarea:focus {
     border-color: #7b4bb7;
     box-shadow: 0 0 6px rgba(123, 75, 183, 0.3);
 }
+
 
 /* ======== Botão ======== */
 .btn-primary {
@@ -487,12 +559,15 @@ textarea:focus {
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
+
 .btn-primary:hover {
     background-color: #5a2d82;
     transform: scale(1.02);
 }
 
+
 /* ======== Responsividade ======== */
+
 
 /* Tablets */
 @media (max-width: 900px) {
@@ -502,6 +577,7 @@ textarea:focus {
     }
 }
 
+
 /* Celulares */
 @media (max-width: 600px) {
     .signup-section {
@@ -509,9 +585,11 @@ textarea:focus {
         padding: 25px;
     }
 
+
     legend {
         font-size: 1rem;
     }
+
 
     input,
     select,
@@ -519,7 +597,9 @@ textarea:focus {
         font-size: 0.95rem;
     }
 
+
     .btn-primary {
         font-size: 1rem;
     }
 }
+

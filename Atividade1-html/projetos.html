@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos</title>
     <link rel="stylesheet" href="/Atividade2-css/style.css">
+    <script src="/Atividade3-Javascript/actions.js"></script>
 </head>
+
 
 <body>
     <!-- Cabeçalho -->
@@ -14,11 +17,12 @@
         <nav class="cabecalho_menu_suspenso">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul id="navMenu">
-                <li> <a href="index.html"> inicio</a></li>
-                <li> <a href="projetos.html"> Projetos</a></li>
-                <li> <a href="cadastro.html"> Cadastro </a></li>
+                <li> <a href="/Atividade1-html/index.fixed.html"> inicio</a></li>
+                <li> <a href="/Atividade1-html/projetos.html"> Projetos</a></li>
+                <li> <a href="/Atividade1-html/cadastro.html"> Cadastro </a></li>
             </ul>
         </nav>
+
 
         <section class="banner">
             <div class="banner_texto">
@@ -33,12 +37,15 @@
         </section>
     </header>
 
+
     <main>
+
 
         <section id="projetos">
             <h2>Conheça Nossos Projetos</h2>
-            <p>Todos os nossos projetos têm como foco principal o desenvolvimento da alfabetização e o fortalecimento da convivência social entre pessoas da terceira idade. 
+            <p>Todos os nossos projetos têm como foco principal o desenvolvimento da alfabetização e o fortalecimento da convivência social entre pessoas da terceira idade.
                 um deles.</p>
+
 
             <div class="projetos-grid">
                 <article>
@@ -49,6 +56,7 @@
                         tiveram a oportunidade de estudar na juventude.</p>
                 </article>
 
+
                 <article>
                     <img src="/Imagens/Projeto 2.jpg" alt="Idosa usando celular em oficina digital">
                     <h3>Projeto “Conectados com o Futuro”</h3>
@@ -58,6 +66,7 @@
                         parte
                         do mundo moderno.</p>
                 </article>
+
 
                 <article>
                     <img src="/Imagens/projeto 3.jpg" alt="Grupo de idosos em roda de conversa compartilhando histórias">
@@ -70,6 +79,8 @@
         </section>
 
 
+
+
         <section id="projetos">
             <h2>Seja um Voluntário</h2>
             <p>Junte-se a nós e faça parte dessa transformação! Ser voluntário na <strong>Alfabetização Solidária 3ª
@@ -77,16 +88,26 @@
                 aprender com histórias incríveis. Aceitamos voluntários para funções como educadores, monitores de
                 informática,
                 apoio em eventos e comunicação digital. </p>
-            <a class="Button" href="cadastro.html">Quero Ser Voluntário</a>
+            <a class="Button" href="/Atividade1-html/cadastro.html">Quero Ser Voluntário</a>
         </section>
 
+
     </main>
+
 
     <!-- Rodape -->
     <footer> © 2025 ONG Alfabetização Solidária 3ª Idade — Todos os direitos reservados.
         Feito por Dayane Santos.</footer>
 
-    <script src="script.js"></script>
+
+    <script src="../Atividade3-Javascript/actions.js"></script>
+    <script src="../Atividade3-Javascript/cadastro.js"></script>
+    <script>
+        // Função mínima para abrir/fechar o menu (caso não exista em actions.js)
+        function toggleMenu(){ const nav = document.getElementById("navMenu"); if(!nav) return; nav.classList.toggle("open"); }
+    </script>
 </body>
 
+
 </html>
+

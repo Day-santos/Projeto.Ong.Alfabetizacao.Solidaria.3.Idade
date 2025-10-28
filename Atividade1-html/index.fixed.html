@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Alfabetização</title>
-    <link rel="stylesheet" href="/Atividade2-css/style.css">
+    <link rel="stylesheet" href="../Atividade2-css/style.css">
 </head>
+
 
 <body>
     <!-- Cabeçalho -->
@@ -14,12 +16,13 @@
         <nav class="cabecalho_menu_suspenso">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul id="navMenu">
-                <li> <a href="index.html"> inicio</a></li>
-                <li> <a href="projetos.html"> Projetos</a></li>
-                <li> <a href="cadastro.html"> Cadastro </a></li>
+                <li> <a href="/Atividade1-html/index.fixed.html"> inicio</a></li>
+                <li> <a href="/Atividade1-html/projetos.html"> Projetos</a></li>
+                <li> <a href="/Atividade1-html/cadastro.html"> Cadastro </a></li>
             </ul>
         </nav>
     </header>
+
 
     <section class="banner">
         <div class="banner_texto">
@@ -28,7 +31,9 @@
         </div>
     </section>
 
+
     <main>
+
 
         <!-- Quem somos -->
         <section class="about">
@@ -54,6 +59,8 @@
         </section>
 
 
+
+
         <!-- Missão, Visão e Valores -->
         <section class="mvv-container">
             <div class="mvv-card">
@@ -64,12 +71,14 @@
                     mais justa, solidária e igualitária.</p>
             </div>
 
+
             <div class="mvv-card">
                 <h2>Visão</h2>
                 <p>Ser reconhecida como uma referência nacional em programas de alfabetização e inclusão social para a
                     terceira idade, impactando positivamente comunidades e inspirando novas gerações a valorizar o
                     conhecimento em todas as fases da vida.</p>
             </div>
+
 
             <div class="mvv-card">
                 <h2>Valores</h2>
@@ -79,7 +88,9 @@
         </section>
         >
 
+
         <!-- Contato -->
+
 
         <section class="contato">
             <h1> Contato </h1>
@@ -89,13 +100,23 @@
             <p>Telefone: (11) 99999-9999</p>
         </section>
 
+
     </main>
+
 
     <!-- Rodape -->
     <footer> © 2025 ONG Alfabetização Solidária 3ª Idade — Todos os direitos reservados.
         Feito por Dayane Santos.</footer>
 
-    <script src="script.js"></script>
+
+    <script src="../Atividade3-Javascript/actions.js"></script>
+    <script src="../Atividade3-Javascript/cadastro.js"></script>
+    <script>
+        // Função mínima para abrir/fechar o menu (caso não exista em actions.js)
+        function toggleMenu(){ const nav = document.getElementById("navMenu"); if(!nav) return; nav.classList.toggle("open"); }
+    </script>
 </body>
 
+
 </html>
+
