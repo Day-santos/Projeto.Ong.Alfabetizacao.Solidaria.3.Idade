@@ -21,9 +21,13 @@
                 <li> <a href="projetos.html"> Projetos</a></li>
                 <li> <a href="cadastro.html"> Cadastro </a></li>
             </ul>
+            <!-- Botão de acessibilidade (modo noturno) -->
+            <button id="themeToggle" class="btn-acessibilidade" aria-label="Alternar modo noturno">
+                🌙
+            </button>
         </nav>
 
-
+        <!-- Banner -->
         <section class="banner">
             <div class="banner_texto">
                 <h1> Projetos Sociais </h1>
@@ -40,10 +44,11 @@
 
     <main>
 
-
+        <!-- Projetos -->
         <section id="projetos">
             <h2>Conheça Nossos Projetos</h2>
-            <p>Todos os nossos projetos têm como foco principal o desenvolvimento da alfabetização e o fortalecimento da convivência social entre pessoas da terceira idade.
+            <p>Todos os nossos projetos têm como foco principal o desenvolvimento da alfabetização e o fortalecimento da
+                convivência social entre pessoas da terceira idade.
                 um deles.</p>
 
 
@@ -69,7 +74,8 @@
 
 
                 <article>
-                    <img src="/Imagens/projeto 3.jpg" alt="Grupo de idosos em roda de conversa compartilhando histórias">
+                    <img src="/Imagens/projeto 3.jpg"
+                        alt="Grupo de idosos em roda de conversa compartilhando histórias">
                     <h3>Projeto “Memórias que Ensinam”</h3>
                     <p>Roda de conversa e oficinas culturais que valorizam as histórias de vida dos participantes.
                         Cada encontro é uma troca de experiências, fortalecendo vínculos e ampliando o sentimento de
@@ -79,8 +85,7 @@
         </section>
 
 
-
-
+        <!-- Seja voluntario -->
         <section id="projetos">
             <h2>Seja um Voluntário</h2>
             <p>Junte-se a nós e faça parte dessa transformação! Ser voluntário na <strong>Alfabetização Solidária 3ª
@@ -100,14 +105,14 @@
         Feito por Dayane Santos.</footer>
 
 
-        <script src="/javascript/actions.js"></script>
-        <script src="/javascript/cadastro.js"></script>
-        <script>
+    <script src="/javascript/actions.js"></script>
+    <script src="/javascript/cadastro.js"></script>
+
+    <script>
         // Função mínima para abrir/fechar o menu (caso não exista em actions.js)
-        function toggleMenu(){ const nav = document.getElementById("navMenu"); if(!nav) return; nav.classList.toggle("open"); }
+        function toggleMenu() { const nav = document.getElementById("navMenu"); if (!nav) return; nav.classList.toggle("open"); }
     </script>
 </body>
 
 
 </html>
-

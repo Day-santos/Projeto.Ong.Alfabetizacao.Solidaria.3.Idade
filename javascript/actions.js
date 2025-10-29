@@ -94,7 +94,7 @@
                     if (href.endsWith('projetos.html')) navigateTo('projetos');
                     else if (href.endsWith('cadastro.html')) navigateTo('cadastro');
                     else navigateTo('inicio');
-                   
+
                     // fecha menu quando clicar (se existir)
                     const nav = document.getElementById('navMenu');
                     if (nav && nav.classList.contains('open')) nav.classList.remove('open');
@@ -143,6 +143,30 @@
 
 
 })();
+// Botão de modo noturno (acessibilidade)
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("themeToggle");
+    const body = document.body;
 
+    // Verifica se o usuário já tem preferência salva
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+        body.classList.add("dark-mode");
+        toggleButton.textContent = "☀️";
+        toggleButton.setAttribute("aria-label", "Ativar modo claro");
+    }
 
+    toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
 
+        if (body.classList.contains("dark-mode")) {
+            toggleButton.textContent = "☀️";
+            toggleButton.setAttribute("aria-label", "Ativar modo claro");
+            localStorage.setItem("theme", "dark");
+        } else {
+            toggleButton.textContent = "🌙";
+            toggleButton.setAttribute("aria-label", "Ativar modo escuro");
+            localStorage.setItem("theme", "light");
+        }
+    });
+});

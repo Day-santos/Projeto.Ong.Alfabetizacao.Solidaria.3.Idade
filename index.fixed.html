@@ -20,10 +20,15 @@
                 <li> <a href="projetos.html"> Projetos</a></li>
                 <li> <a href="cadastro.html"> Cadastro </a></li>
             </ul>
+
+            <!-- Botão de acessibilidade (modo noturno) -->
+            <button id="themeToggle" class="btn-acessibilidade" aria-label="Alternar modo noturno">
+                🌙
+            </button>
         </nav>
     </header>
 
-
+    <!-- Banner -->
     <section class="banner">
         <div class="banner_texto">
             <h1> ONG Alfabetização Solidária 3ª Idade </h1>
@@ -33,7 +38,6 @@
 
 
     <main>
-
 
         <!-- Quem somos -->
         <section class="about">
@@ -57,9 +61,6 @@
                 idoso tem dentro de si uma nova história pronta para ser escrita.
             </p>
         </section>
-
-
-
 
         <!-- Missão, Visão e Valores -->
         <section class="mvv-container">
@@ -86,12 +87,8 @@
                 </p>
             </div>
         </section>
-        >
-
 
         <!-- Contato -->
-
-
         <section class="contato">
             <h1> Contato </h1>
             <p><strong>Alfabetização Solidária 3ª Idade — Aprender é recomeçar.</strong></p>
@@ -105,18 +102,19 @@
 
 
     <!-- Rodape -->
+
     <footer> © 2025 ONG Alfabetização Solidária 3ª Idade — Todos os direitos reservados.
         Feito por Dayane Santos.</footer>
 
 
-        <script src="/javascript/actions.js"></script>
-        <script src="/javascript/cadastro.js"></script>
+    <script src="/javascript/actions.js"></script>
+    <script src="/javascript/cadastro.js"></script>
+
     <script>
         // Função mínima para abrir/fechar o menu (caso não exista em actions.js)
-        function toggleMenu(){ const nav = document.getElementById("navMenu"); if(!nav) return; nav.classList.toggle("open"); }
+        function toggleMenu() { const nav = document.getElementById("navMenu"); if (!nav) return; nav.classList.toggle("open"); }
     </script>
+
 </body>
 
-
 </html>
-

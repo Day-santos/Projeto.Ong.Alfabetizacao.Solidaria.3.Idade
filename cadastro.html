@@ -20,9 +20,14 @@
                 <li> <a href="projetos.html"> Projetos</a></li>
                 <li> <a href="cadastro.html"> Cadastro </a></li>
             </ul>
+
+     <!-- Botão de acessibilidade (modo noturno) -->
+<button id="themeToggle" class="btn-acessibilidade" aria-label="Alternar modo noturno">
+    🌙 
+</button>
         </nav>
 
-
+    <!-- Banner -->
         <section class="banner">
             <div class="banner_texto">
                 <h1> Cadastre-se como voluntário</h1>
@@ -111,15 +116,14 @@
     <footer> © 2025 ONG Alfabetização Solidária 3ª Idade — Todos os direitos reservados.
         Feito por Dayane Santos.</footer>
 
-        <script src="/javascript/actions.js"></script>
-        <script src="/javascript/cadastro.js"></script>
-        <script>
-            
+    <script src="/javascript/actions.js"></script>
+    <script src="/javascript/cadastro.js"></script>
+    <script>
+
         // Função mínima para abrir/fechar o menu (caso não exista em actions.js)
-        function toggleMenu(){ const nav = document.getElementById("navMenu"); if(!nav) return; nav.classList.toggle("open"); }
+        function toggleMenu() { const nav = document.getElementById("navMenu"); if (!nav) return; nav.classList.toggle("open"); }
     </script>
 </body>
 
 
 </html>
-
