@@ -42,7 +42,7 @@
 
         if (route === 'inicio') {
             main.innerHTML = initialContent;
-            bindLinks(); 
+            bindLinks();
             return;
         }
 
@@ -156,5 +156,27 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleButton.setAttribute("aria-label", "Ativar modo escuro");
             localStorage.setItem("theme", "light");
         }
+    });
+});
+// === Menu Responsivo ===
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("navMenu");
+
+    if (!toggle || !menu) return; // segurança
+
+    // Alterna o menu ao clicar no botão
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("ativo");
+        toggle.classList.toggle("ativo");
+    });
+
+    // Fecha o menu ao clicar em um link (melhor UX no mobile)
+    const links = menu.querySelectorAll("a");
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("ativo");
+            toggle.classList.remove("ativo");
+        });
     });
 });
