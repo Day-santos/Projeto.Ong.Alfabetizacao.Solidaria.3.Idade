@@ -1,9 +1,3 @@
-
-
-// actions.js - SPA simples para o projeto da ONG
-// Responsável por: rotas hash-based, injeção de templates (projetos/cadastro) e utilitários (toggleMenu)
-
-
 (function () {
     'use strict';
 
@@ -48,22 +42,18 @@
 
         if (route === 'inicio') {
             main.innerHTML = initialContent;
-            bindLinks(); // re-bind links that may be inside injected content
+            bindLinks(); 
             return;
         }
 
 
         const routeInfo = routes[route];
         if (routeInfo.path) {
-            // tentativa de carregar via fetch o arquivo relativo (funciona quando servido por HTTP)
+
             const html = await fetchRouteHtml(routeInfo.path);
             main.innerHTML = html;
             bindLinks();
-            // se a rota for cadastro, ligar o listener de formulário (se existir)
             if (route === 'cadastro') {
-                // se o arquivo cadastrado já contém script de validação, ele será executado ao injetar o HTML
-                // caso contrário, usuário já tem cadastro.js incluído globalmente para tratar o formulário.
-                // Forçar foco no primeiro input se houver
                 const firstInput = main.querySelector('input, textarea, select');
                 if (firstInput) firstInput.focus();
             }
@@ -73,15 +63,14 @@
 
     function navigateTo(route) {
         if (!routes[route]) route = 'inicio';
-        // atualiza hash (isso também mantém o histórico navegável)
         location.hash = '#' + route;
-        // chamar render explicitamente (popstate também chamará, mas aqui garantimos resposta imediata)
+
         render(route);
     }
 
 
     function bindLinks() {
-        // intercepta links do menu principal para rotas SPA
+        // intercepta links do menu principal 
         const anchors = document.querySelectorAll('a[href]');
         anchors.forEach(a => {
             const href = a.getAttribute('href');
@@ -95,7 +84,7 @@
                     else if (href.endsWith('cadastro.html')) navigateTo('cadastro');
                     else navigateTo('inicio');
 
-                    // fecha menu quando clicar (se existir)
+                    // fecha menu quando clicar 
                     const nav = document.getElementById('navMenu');
                     if (nav && nav.classList.contains('open')) nav.classList.remove('open');
                 });
@@ -105,7 +94,6 @@
 
 
     function setupMenuToggle() {
-        // garante que exista um botão .menu-toggle
         const btn = document.querySelector('.menu-toggle');
         if (btn) {
             btn.addEventListener('click', function () {
@@ -115,7 +103,7 @@
     }
 
 
-    // Função utilitária pública mínima para abrir/fechar menu (usada pelo atributo onclick no HTML)
+    // Função utilitária pública mínima para abrir/fechar menu
     window.toggleMenu = function toggleMenu() {
         const nav = document.getElementById('navMenu');
         if (!nav) return;
@@ -129,12 +117,12 @@
         setupMenuToggle();
 
 
-        // rota inicial a partir do hash
+        // rota inicial
         const hash = location.hash.replace('#', '') || 'inicio';
         render(hash);
 
 
-        // responde ao histórico (back/forward)
+        // responde ao histórico 
         window.addEventListener('hashchange', function () {
             const h = location.hash.replace('#', '') || 'inicio';
             render(h);

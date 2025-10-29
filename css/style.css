@@ -476,7 +476,7 @@ footer {
 
 
 /* ======== Mensagem de sucesso ======== */
-.success-message {
+.success-message{ 
     display: none;
     opacity: 0;
     background-color: #8eca9c;
@@ -642,7 +642,7 @@ body.dark-mode .banner_texto p {
 }
 
 body.dark-mode main>section {
-    background-color: #1f1f1f;
+    background-color: #ffffff;
     color: #000000;
     box-shadow: 0 0 8px rgba(253, 253, 253, 0.1);
 }
@@ -673,7 +673,7 @@ body.dark-mode .btn-primary:hover {
 body.dark-mode .success-message {
     background-color: #2e7d32;
     color: #fff;
-    border-color: #001b01;
+    border-color: #4caf50;
 }
 
 body.dark-mode .error-message {

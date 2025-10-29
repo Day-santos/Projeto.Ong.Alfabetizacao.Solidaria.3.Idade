@@ -131,7 +131,6 @@
             successMessage.style.opacity = '1';
             successMessage.textContent = '✅ Cadastro realizado com sucesso! Entraremos em contato em breve.';
 
-            // animação de fade out após alguns segundos
             setTimeout(() => {
                 successMessage.style.transition = 'opacity 0.5s';
                 successMessage.style.opacity = '0';
